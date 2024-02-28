@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bulb app</title>
+    <style>
+       .bulb-img{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 100px;
+        gap: 20px;
+       }
+
+       .button{
+        background-color: rgb(241, 241, 7);
+        border: 3px solid black;
+        padding: 10px 10px;
+        border-radius: 6px;
+        color: rgb(15, 19, 22);
+        font-size: large;
+        font-weight: bold;
+        cursor: pointer;
+       }
+       .button:hover{
+        background-color: rgb(231, 7, 7);
+       }
+       #heading{
+        text-align: center;
+       margin-top: 20px;
+       padding: 10px 10px;
+       background-color: aqua;
+       
+       }
+    </style>
+</head>
+<body>
+    <div><h1  id="heading">BULB ON-OFF </h1></div>
+    <div class="bulb-img">
+        <img id="offbulb" src="https://i.pinimg.com/474x/a9/06/d1/a906d1d70b8246e6feff0e67c3be256d.jpg" width="250" height="420" alt="bulboff">
+   <button class="button" id="btn">Press to on </button>
+   <button class="button" id="btn2">Press to off </button>
+</div>
+    <script src="bulb.js"></script>
+</body>
+</html>

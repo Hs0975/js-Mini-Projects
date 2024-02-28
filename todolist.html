@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todolist</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            background-color: rgb(27, 122, 191);
+            height: 100vh;
+            width: 100%;  
+            display: flex; 
+            justify-content: center;
+        }
+
+     .data {
+           height: 100vh;
+            width: 520px;
+            border: 2px solid black;
+
+            background-color: rgb(224, 220, 222);
+            box-shadow: 0px 10px 20px whitesmoke;
+        } 
+
+        #h1 {
+            text-align: center;
+            margin-top: 10px;
+            color: rgb(233, 74, 11);
+        }
+
+        #input {
+            border: 2px solid rgb(44, 41, 41);
+            padding: 10px 60px;
+            text-align: center;
+            margin: 20px 30px;
+            font-size: 1rem;
+        }
+
+        #input:focus {
+            background-color: rgb(254, 248, 248);
+            color: black;
+        }
+
+        #btn {
+            padding: 8px 25px;
+            border-radius: 5px;
+            background-color: rgb(32, 229, 118);
+            color: white;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .btns {
+            padding: 8px 25px;
+            border-radius: 5px;
+            color: white;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 10px 10px;
+        }
+
+        #edtbtn {
+            background-color: brown;
+        }
+
+        #edtbtn:hover {
+            background-color: rgb(101, 11, 11);
+        }
+
+        #delbtn {
+            background-color: red;
+        }
+
+        #delbtn:hover {
+            background-color: rgb(219, 27, 27);
+        }
+
+        #btn:hover {
+            background-color: rgb(5, 100, 46);
+        }
+
+        #list {
+            border: 0.5px solid rgb(25, 19, 19);
+           width: 518px;
+           height: 70px;
+           background-color: yellow;
+        }
+.li{
+    display: flex;
+}
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="data">
+            <h1 id="h1">TODO LIST</h1>
+            <input type="text" id="input" placeholder="enter your items">
+            <button id="btn">
+                Add
+            </button>
+            
+<div id="list"> 
+    
+           
+</div>
+          
+
+        </div>
+              
+      
+    </div>
+
+    <script src="todo.js"></script>
+</body>
+
+</html>

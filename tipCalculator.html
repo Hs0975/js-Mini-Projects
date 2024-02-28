@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>replit</title>
+   <style>
+    .heading{
+    border: 2px solid blue;
+    width: 300px;
+    text-align: center;
+    margin-left: 40%;
+    background-color: blue;
+    color: white;
+}
+#form{
+    border: 2px solid beige;
+    width: 300px;
+    text-align: center;
+    margin-left: 40%;
+    background-color: beige;
+}
+#footer{
+    border: 2px solid beige;
+    width: 300px;
+    text-align: center;
+    margin-left: 40%;
+    background-color: beige;
+
+}
+#clear{
+    border: 2px solid red;
+    width: 300px;
+    text-align: center;
+    margin-left: 40%;
+    background-color: red;
+    color: white;
+
+}
+   </style>
+  </head>
+  <body>
+    <div id="container">
+        <div class="heading">
+            <h3>TIP CALCULATOR</h3>
+
+        </div>
+        <div id="form">
+            Enter Your Bill Amount <br>
+            Rs <input type="text" id="amount"><br>
+
+            <br>
+            How Was The Service?<br>
+            <select id="service">
+                <option value="Excellent-20%">Excellent-20%</option>
+                <option value="Medium-10%">Medium-10%</option>
+                <option value="Not so Good -5%">Not so Good -5%</option>
+            </select><br><br>
+            How Many People Are Sharing The Bill?<br>
+            <input type="text" id="share"><BR></BR>
+            <button id="calculate">CALCULATE</button><br>
+
+
+
+
+        </div>
+        <div id="footer">
+            <h3>TIP AMOUNT FOR EACH PERSON IN RS:-</h3>
+            <input type="text" id="tipamount" disabled>
+
+        </div><BR></BR>
+        <button id="clear"> CLEAR ALL</button>
+    </div>
+    <script src="tipCalculator.js"></script>
+  </body>
+</html>

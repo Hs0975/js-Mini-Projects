@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form submission</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="form">
+            <input id="first" type="text" placeholder="First name">
+            <input id="last" type="text" placeholder="Last name">
+            <input id="phone" type="number" placeholder="Phone number">
+            <input id="btn" type="button" value="Submit">
+        </div>
+
+        <div id="table">
+            <table>
+                <tr>
+                    <th>
+                        First Name
+                    </th>
+                    <th>
+                        Last Name
+                    </th>
+                    <th>
+                        Phone Number
+                    </th>
+                </tr>
+            </table>
+        </div>
+
+
+    </div>
+    <script>
+
+        const first = document.getElementById("first")
+        const last = document.getElementById("last")
+        const number = document.getElementById("phone")
+        const submitButton = document.getElementById("btn")
+        const table = document.getElementById("table")
+
+        submitButton.addEventListener("click", function(){ //create and edit 
+            //if current phone numbr is already there
+            //we need to go through all the table rows and check if phone number already exists
+            //if it exists it means user is trying to edit
+            //if it not, it means user is creating a new entry
+            const elem = document.querySelector(`tr#tr-${number.value}`);
+            
+
+            if(first.value && last.value && number.value) {
+                if(elem) { //Table row of already existing phone number
+                   /*  console.log(elem.childNodes) // find TD in the table row */
+                    elem.childNodes[0].data = first.value;
+                    elem.childNodes[1].data = last.value;
+                }
+                else { //if entry with same phone number does not exist, so create a new entry by creating a new table row
+                    const tr = document.createElement("tr")
+                    let td1 = document.createElement("td")
+                    let td2 = document.createElement("td")
+                    let td3 = document.createElement("td")
+                    let editButton = document.createElement("button");
+                    let deleteButton = document.createElement("button");
+                    editButton.textContent = "Edit";
+                    editButton.onclick = () => {
+                        first.value = td1; //first name
+                        last.value = td2; //last name
+                        number.value = td3; //phone number
+                        first.focus(); //for focus on click
+                    }
+                    deleteButton.textContent = "Delete";
+                    deleteButton.onclick = () => {
+                        table.removeChild(tr);
+                    }
+                    td1 = first.value
+                    td2 = last.value
+                    td3 = number.value
+                    tr.id = "tr-" + number.value; //givind id to the row as tr-phoneNumber
+                    tr.append(td1, td2, td3, editButton, deleteButton);
+                    table.appendChild(tr)
+
+                }
+                //Clear all the inputs after submit
+                first.value = "";
+                last.value = "";
+                number.value = "";
+            }
+        });
+
+        
+
+
+    </script>
+
+</body>
+
+</html>

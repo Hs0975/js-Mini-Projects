@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        .main-div {
+            display: flex;
+            height: 100vh;
+            width: 100%;
+            background-color: rgb(249, 245, 239);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+             
+        }
+
+        .content-div {
+            height: 77vh;
+            width: 43%;
+            border: 2px solid rgb(185, 181, 181);
+            text-align: center;
+            padding-top: 10px;
+            border-radius: 10px;
+            box-shadow:  5px 20px 40px rgba(246, 108, 108, 0.2);
+            background-color: rgb(27, 18, 18);
+
+
+        }
+
+        .clcirow {
+            padding: 5px;
+            gap: 30px;
+        }
+
+        .clcirow button {
+            height: 100px;
+            width: 150px;
+            border: 2px solid black;
+            background-color: rgb(240,255,255);
+            border-radius: 5px;
+            color: rgb(18, 20, 21);
+            font-size: larger;
+            font-weight: bolder;
+            cursor: pointer;
+        }
+
+        #textfield {
+            width: 70%;
+            height: 100px;
+            border: 3px solid black;
+            border-radius: 5px;
+        }
+
+        #heading {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main-div">
+        <div class="content-div">
+            <div class="clcirow">
+                <input id="textfield" type="text">
+                <button class="calci" id="calculate">
+                    C
+                </button>
+            </div>
+
+            <div class="clcirow">
+                <button id="count1">1</button>
+                <button id="count2">2</button>
+                <button id="count3">3</button>
+                <button id="divide">/</button>
+            </div>
+            <div class="clcirow">
+                <button id="count4">4</button>
+                <button id="count5">5</button>
+                <button id="count6">6</button>
+                <button id="multi">*</button>
+            </div>
+
+            <div class="clcirow">
+                <button id="count7">7</button>
+                <button id="count8">8</button>
+                <button id="count9">9</button>
+                <button id="subs">-</button>
+            </div>
+
+            <div class="clcirow">
+                <button id="count0">0</button>
+                <button id="point">.</button>
+                <button id="equal">=</button>
+                <button id="add">+</button>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+</html>
